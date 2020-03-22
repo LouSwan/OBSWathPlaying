@@ -2,8 +2,12 @@ from playsound import playsound as p
 import time
 import os
 import random
-count = 0
+import json
+
 current_status = "Waiting"
+data = json.load(open('config.json'))
+before = data['before']
+after = data['after']
 
 mode = str(input("Do you want the player to play randomly musics or left to right ? (default/random) ---> "))
 
@@ -30,7 +34,6 @@ def main():
 		print("Playlist have " + str(len(playlist)) + " items ! ")
 		time.sleep(0.5)
 		while True:
-
 			if mode == "default":
 				for song in playlist:
 					os.system('clear')
@@ -50,6 +53,8 @@ def main():
 
 def playsound(url):
 	global current_status
+	global before
+	global after
 	current_status = "Playing"
 	size_bytes = os.path.getsize(url)
 	size = size_bytes / 1000
@@ -60,7 +65,7 @@ def playsound(url):
 	print("Playing " + sound_name + " at " + current_path + "/" + url)
 	print("STATUS : " + current_status, end='\r')
 	with open("obs_read.txt", "w") as file:
-		file.write("Currently playing " + args[0] + "...")
+		file.write(before + " " + args[0] + after)
 	time.sleep(1)
 	p(url)
 
