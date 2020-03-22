@@ -15,7 +15,7 @@ A2- You need to put all your mp3 files in this directory !
 
 Q3- How do I change the text ?
 
-A3- Simply go into the config.json file and change the before and after as you wish :) !
+A3- Simply go into the config.json file and change the before and after as your wish :) !
 
 Q4- How do I display the music currently played in obs ?
 
