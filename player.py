@@ -14,6 +14,7 @@ mode = str(input("Do you want the player to play randomly musics or left to righ
 def main():
 	global current_status
 	global mode
+	mode = mode.lower()
 	files = os.listdir()
 	playlist = []
 	files_time = []
