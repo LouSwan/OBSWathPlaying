@@ -13,13 +13,17 @@ Q2- How do I play musics ?
 
 A2- You need to put all your mp3 files in this directory !
 
-Q3- How do I display the music currently played in obs ?
+Q3- How do I change the text ?
 
-A3- You need to create a new Text, Edit it and click on Text File (UTF-8 or UTF-16) and then select the obs_read.txt in this directory ( /!\ MAKE SURE THAT "CHAT LOG MODE" and "READ FROM FILE" ARE TRIGGERED !)!
+A3- Simply go into the config.json file and change the before and after as you wish :) !
 
-Q4- Can I edit your code ?
+Q4- How do I display the music currently played in obs ?
 
-A4- Yes, you can do whatever you want with it ! It's a MIT license (: !
+A4- You need to create a new Text, Edit it and click on Text File (UTF-8 or UTF-16) and then select the obs_read.txt in this directory ( /!\ MAKE SURE THAT "CHAT LOG MODE" and "READ FROM FILE" ARE TRIGGERED !)!
+
+Q5- Can I edit your code ?
+
+A5- Yes, you can do whatever you want with it ! It's a MIT license (: !
 
 
 ~~~~ By Louswan ~~~~
