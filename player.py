@@ -4,6 +4,7 @@ import os
 import random
 import json
 
+count = 0
 current_status = "Waiting"
 data = json.load(open('config.json'))
 before = data['before']
@@ -18,15 +19,18 @@ def main():
 	files = os.listdir()
 	playlist = []
 	files_time = []
-	mp3_files = ""
+	playing_files = ""
 	for file in files:
 		if ".mp3" in file:
 			playlist.append(file)
-			mp3_files += file + " "
+			playing_files += file + " "
+		elif ".ogg" in file:
+			playlist.append(file)
+			playing_files += file + " "
 		else:
 			continue
-	if len(mp3_files) >= 1:
-		print("The mp3 files in the directory are : " + mp3_files)
+	if len(playing_files) >= 1:
+		print("The mp3 files in the directory are : " + playing_files)
 	else:
 		print("OOF There is not any mp3 file in that directory ! :(")
 		return
