@@ -27,6 +27,9 @@ def main():
 		elif ".ogg" in file:
 			playlist.append(file)
 			playing_files += file + " "
+		elif ".mpeg" in file:
+			playlist.append(file)
+			playing_files += file + " "
 		else:
 			continue
 	if len(playing_files) >= 1:
